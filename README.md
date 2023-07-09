@@ -10,7 +10,6 @@ i use arch btw
 - hyprland (i use hyprland-hidpi-xprop-git)
 - fuzzel
 - wezterm
-- swaylock
 - thunar
 - waybar
 - bash (if using other shell copy file contents below the marker into your rc file)
@@ -19,6 +18,9 @@ also includes configs for:
 
 - alacritty
 - mopidy
+    - Enables ncmpcpp visualization
+- swaylock
+    - Loads background from ~/Pictures/desktop-bg.png
 
 ## Installation
 
