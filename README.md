@@ -12,6 +12,7 @@ i use arch btw
 - wezterm
 - thunar
 - ironbar
+    - `bc` needed for volume
 - most shells (copy aliases.sh into your rc file)
 
 also includes configs for:  
