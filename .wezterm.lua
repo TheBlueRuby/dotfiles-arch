@@ -8,7 +8,7 @@ end
 
 config.enable_tab_bar = false
 
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.75
 
 config.color_scheme = 'Builtin Dark'
 config.colors = {
