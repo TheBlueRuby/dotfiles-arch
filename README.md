@@ -8,7 +8,7 @@ i use arch btw
 ## Dependencies
 
 - hyprland (i use hyprland-hidpi-xprop-git)
-- fuzzel
+- wofi
 - wezterm
 - thunar
 - waybar
@@ -21,6 +21,7 @@ also includes configs for:
     - Enables ncmpcpp visualization
 - swaylock
     - Loads background from ~/Pictures/desktop-bg.png
+- fuzzel
 
 ## Installation
 
