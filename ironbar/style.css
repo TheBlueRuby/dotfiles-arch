@@ -1,0 +1,39 @@
+* {
+	border-radius: 4px;
+}
+
+.background {
+	background-color: transparent;
+}
+
+.clock {
+	margin-left: 8px;
+	background-color: grey;
+	border-width: 0px;
+}
+
+.upower {
+	margin-left: 8px;
+	background-color: rgb(92, 198, 92);
+	border-width: 0px;
+}
+
+.volume {
+	margin-left: 8px;
+	padding: 4px;
+	background-color: rgb(63, 172, 255);
+	border-width: 2px;
+}
+
+.wifi {
+	margin-left: 8px;
+	padding: 4px;
+	background-color: rgb(96, 181, 183);
+	border-width: 2px;
+	
+}
+
+.focused {
+	background-color: grey;
+	padding: 4px;
+}

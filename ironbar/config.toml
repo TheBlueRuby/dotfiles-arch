@@ -1,0 +1,29 @@
+position = "top"
+height = 32
+margin.top = 4
+margin.left = 8
+margin.right = 8
+
+[[start]]
+type = 'focused'
+icon_size = 16
+
+[[center]]
+type = 'music'
+player_type = 'mpd'
+
+[[end]]
+class = 'volume'
+type = 'label'
+label = 'Volume: {{echo "$(wpctl get-volume @DEFAULT_AUDIO_SINK@) * 100" | sed "s/Volume: //" | bc | sed "s/.00//"}}%'
+
+[[end]]
+class = 'wifi'
+type = 'label'
+label = 'Wifi: {{iwgetid | sed "s/wlan0     ESSID:\"//" | sed "s/\"//"}}'
+
+[[end]]
+type = 'upower'
+
+[[end]]
+type = 'clock'

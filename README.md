@@ -11,7 +11,7 @@ i use arch btw
 - fuzzel
 - wezterm
 - thunar
-- waybar
+- ironbar
 - most shells (copy aliases.sh into your rc file)
 
 also includes configs for:  
@@ -22,6 +22,7 @@ also includes configs for:
 - swaylock
     - Loads background from ~/Pictures/desktop-bg.png
 - wofi
+- waybar
 
 ## Installation
 
