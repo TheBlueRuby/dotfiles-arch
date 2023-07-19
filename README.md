@@ -36,7 +36,7 @@ The dotfiles repo directory will be represented as $REPO_DIR
 4. symlink all folders except screenshots/ into your .config folder
     - `cd ~/.config`
     - for each folder do `ln -s $REPO_DIR/$FOLDER` where $FOLDER is the folder you are linking
-5. copy .wezterm.lua into your home directory
+5. copy .wezterm.luav and screenshot.sh into your home directory
 6. copy aliases.sh into your shell rc file
     - Bash: `cat aliases.sh >> ~/.bashrc`
     - Zsh: `cat aliases.sh >> ~/.zshrc`
