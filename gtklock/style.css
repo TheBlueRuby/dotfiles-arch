@@ -1,0 +1,21 @@
+window {
+   background-image: url("/home/theblueruby/Pictures/desktop-bg.png");
+   background-size: crop;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: #3c5;
+}
+
+#clock-label {
+	color: #5f5;
+	font-size: 128px;
+}
+
+#input-label {
+	color: #05f;
+	font-weight: bold;
+}
+
+#input-field {
+	color: #fff;
+}

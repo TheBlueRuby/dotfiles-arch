@@ -14,6 +14,7 @@ i use arch btw
 - ironbar
     - `bc` needed for volume
 - most shells (copy aliases.sh into your rc file)
+- gtklock
 
 also includes configs for:  
 
