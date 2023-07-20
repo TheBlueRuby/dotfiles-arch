@@ -5,25 +5,30 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/window"],
-    "modules-center": [],
-    "modules-right": ["mpd", "pulseaudio", "network", "battery", "clock"],
+    "modules-left": ["custom/arch-pill", "hyprland/window", "wlr/workspaces"],
+    "modules-center": ["mpd"],
+    "modules-right": ["tray", "network", "pulseaudio", "backlight", "clock"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
+     "custom/arch-pill": {
+         "format": "",
+         "on-click": "~/.config/rofi/scripts/launcher",
+         "tooltip": false
+     },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -108,7 +113,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -125,12 +130,14 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format": "Loading",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
