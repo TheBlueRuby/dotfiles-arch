@@ -25,13 +25,13 @@ window#waybar {
   color: @fg;
 }
 
-#custom-arch-pill {
+#custom-pacman {
   margin: 5px;
   padding-left: 10px;
   padding-right: 15px;
-  border-radius: 7px;
   background-color: @fg;
   color: @bg;
+  border-radius: 7px;
 }
 
 #window {
@@ -52,12 +52,16 @@ window#waybar {
 	color: @fg;
 }
 
-#workspaces * {
+#workspaces button {
 	margin-left: 5px;
 	margin-right: 5px;
 	border-radius: 7px;
-	background-color: @fg;
+	background-color: #0af;
 	color: @bg;
+}
+
+#workspaces button.active {
+	background-color: @fg;
 }
 
 #mode {
@@ -70,17 +74,18 @@ window#waybar {
 }
 
 #tray {
-  margin: 5px 0 5px 5px;
+  margin: 5px;
   padding-left: 10px;
-  border-radius: 7px 0 0 7px;
+  padding-right: 10px;
+  border-radius: 7px 7px;
   background-color: @bg;
 }
 
 #network {
-  margin: 5px 5px 5px 0;
+  margin: 5px 0px 5px 0;
   padding-left: 10px;
   padding-right: 15px;
-  border-radius: 7px;
+  border-radius: 7px 0px 0px 7px;
   background-color: @bg;
   color: @fg;
 }
@@ -104,40 +109,37 @@ window#waybar {
 #battery {
   margin: 5px;
   padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 7px;
-  color: @fg;
-  background-color: @bg;
-}
-
-#custom-playerctl {
-  margin: 5px;
-  padding-left: 10px;
   padding-right: 10px;
   border-radius: 7px;
   color: @fg;
   background-color: @bg;
 }
 
-#custom-cafeine {
-  margin: 5px;
-  padding-left: 10px;
-  padding-right: 15px;
-  border-radius: 7px;
-  color: @fg;
-  background-color: @bg;
+#pulseaudio,
+#backlight,
+#battery {
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 0px;
 }
 
-#pulseaudio.muted {
-  background-color: @bg;
-  color: @dark-fg;
+#battery.good {
+	color: #7f7;
 }
+#battery.warning {
+	color: #f77;
+}
+#battery.critical {
+	color: #f00;
+}
+
 
 #clock {
   margin: 5px;
+  margin-left: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 7px;
+  border-radius: 0px 7px 7px 0px;
   color: @fg;
   background-color: @bg;
 }

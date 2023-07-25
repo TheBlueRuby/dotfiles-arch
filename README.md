@@ -33,9 +33,8 @@ The dotfiles repo directory will be represented as $REPO_DIR
 1. Backup your .config folder, your .bashrc and .wezterm.lua
 2. Install all dependencies above using your preferred package manager
 3. clone or download this repo
-4. symlink all folders except screenshots/ into your .config folder
-    - `cd ~/.config`
-    - for each folder do `ln -s $REPO_DIR/$FOLDER` where $FOLDER is the folder you are linking
+4. copy the contents of this .config folder into your home folder
+    - cp -r $REPO_DIR/.config/* ~/.config
 5. copy .wezterm.lua and screenshot.sh into your home directory
 6. copy aliases.sh into your shell rc file
     - Bash: `cat aliases.sh >> ~/.bashrc`
