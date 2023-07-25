@@ -3,7 +3,7 @@
 dotfiles 2 or something  
 i use arch btw
 
-![](screenshots/screenshot-1.png)
+![](screenshots/screenshot.png)
 
 ## Dependencies
 
