@@ -1,0 +1,10 @@
+[arch]
+breeze
+breeze-gtk
+kvantum
+sddm
+thunar
+wezterm
+xorg-server
+xorg-xinit
+
