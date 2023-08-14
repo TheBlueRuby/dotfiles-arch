@@ -1,9 +1,9 @@
 {
     "modules-left": ["custom/pacman", "hyprland/window", "hyprland/workspaces"],
     "modules-center": [],
-    "modules-right": ["tray", "network", "pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["tray", "network", "custom/pipewire", "backlight", "battery", "clock"],
      "hyprland/workspaces": {
-         "format": "{id}: {icon} ",
+         "format": "  {id}  ",
          "format-icons": {
              "1": "",
              "2": "",
@@ -87,6 +87,17 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/pipewire": {
+        "exec": "pw-volume status",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "format": "{icon} {percentage}",
+        "format-icons": {
+            "mute": "",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        }
     },
 }
 
