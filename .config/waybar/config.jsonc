@@ -1,4 +1,5 @@
 {
+	"layer": "top",
     "modules-left": ["custom/pacman", "hyprland/window", "hyprland/workspaces"],
     "modules-center": [],
     "modules-right": ["tray", "network", "custom/pipewire", "backlight", "battery", "clock"],
@@ -29,16 +30,13 @@
 		"format": "{title}"
 	},
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -52,14 +50,9 @@
         "format": "{capacity}% {icon} ",
         "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
-        //"format-alt": "{time} {icon} ",
-        //"format-time": "{H}:{M}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
 		"format": "Loading",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
@@ -70,7 +63,6 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -97,7 +89,8 @@
         "format-icons": {
             "mute": "",
             "default": ["󰕿", "󰖀", "󰕾"]
-        }
+        },
+        "on-click": "pavucontrol"
     },
 }
 
