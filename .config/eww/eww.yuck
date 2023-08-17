@@ -1,0 +1,68 @@
+(defpoll time :interval "1s"
+`date +" %a %b %d %I:%M %p"`)
+
+(defpoll battery :interval "10s"
+`scripts/battery.py`)
+
+(defpoll volume :interval "0.25s"
+`scripts/volume.py`)
+
+(defpoll wifi :interval "5s"
+`scripts/wifi.py`)
+
+(deflisten workspace0 "hyprland-workspaces `hyprctl monitors -j | jq -r \".[0].name\"`")
+
+(defwidget workspaces0 []
+  (box
+    (eventbox :onscroll "hyprctl dispatch workspace `echo {} | sed 's/up/+/\' | sed 's/down/-/'`1"
+      (box :class "workspaces"
+        :space-evenly false
+        :spacing 8
+        :hexpand true
+        (for i in workspace0
+          (button
+            :onclick "hyprctl dispatch workspace ${i.id}"
+            :class "${i.class}"
+          "${i.name}")
+        )
+      )
+    )
+  )
+)
+
+(deflisten window :initial "..." "sh ~/.config/eww/scripts/get-window-title")
+
+(defwidget hypr-info []
+  (box
+    (label :text "${window}"
+    )
+  )
+)
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry
+    :width "100%"
+    :height "4%"
+    :anchor "top center"
+  )
+  :exclusive true
+  
+  (box :class "main-container"
+    
+    (workspaces0)
+    (box
+      :class "windowtitle"
+      :halign "center"
+      :width 512
+      "${window}"
+    )
+    
+    (box
+      :class "time_battery"
+      :halign "end" "${wifi} ${volume} ${battery} ${time}"
+    )
+    
+  )
+)

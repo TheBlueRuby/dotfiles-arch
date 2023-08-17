@@ -1,0 +1,57 @@
+$bg: rgba(#000b1c,25%);
+$fg: #e3e3ea;
+$shadow: rgba(#000000,0.3);
+$accent: #0af;
+.bar {
+	background-color: $bg;	
+}
+
+.main-container {
+	// margin: 8px 12px 0px 12px;
+	border-bottom: 2px solid $accent;
+}
+
+.workspaces {
+	background-color: $bg;
+	// border-radius: 10px;
+	color: $fg;	
+	// border: 2px solid $accent;
+	padding: 4px 4px;
+  font-size: 22px;
+	min-height: 25px;
+}
+
+.time_battery {
+	background: $bg;
+	// border-radius: 10px;
+	color: $fg;
+	font-size: 16px;
+	padding: 5px 15px 5px 14px; 
+	// border: 2px solid $accent;
+	text-shadow: none;
+}
+
+.time_battery:hover {
+    background: rgba(#ffffff,0.15);
+}
+
+.workspace-button {
+  border-radius: 16px;
+  background: $bg;
+  border-color: $accent;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.workspace-active {
+  background-color: $accent;
+  color: #000b1c;
+}
+
+.windowtitle {
+	background-color: $bg;
+	// border: 2px solid $accent;
+	// border-radius: 10px;
+}

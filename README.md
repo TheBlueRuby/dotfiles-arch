@@ -9,10 +9,13 @@ i use arch btw
 
 - hyprland (i use hyprland-hidpi-xprop-git)
     - brightnessctl (for backlight control)
-    - pw-volume (volume control)
+    - wireplumber (volume control)
         - pipewire
+- eww
+    - Based on u/SimonTheAlt's dotfiles (smravec on github)
+    - requires hyprland-workspaces
+    - Uses nmcli
 - wezterm
-- waybar
 - gtklock
 
 also includes configs for:  
@@ -22,6 +25,7 @@ also includes configs for:
     - Loads background from ~/Pictures/desktop-bg.png
 - ironbar
     - `bc` needed for volume
+- waybar
 - fuzzel
 - wlogout
 
